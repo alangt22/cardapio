@@ -675,6 +675,18 @@ video {
   top: 0px;
 }
 
+.top-1 {
+  top: 0.25rem;
+}
+
+.top-10 {
+  top: 2.5rem;
+}
+
+.left-6 {
+  left: 1.5rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -689,6 +701,18 @@ video {
 
 .z-\[99\] {
   z-index: 99;
+}
+
+.z-\[100\] {
+  z-index: 100;
+}
+
+.z-\[1\] {
+  z-index: 1;
+}
+
+.z-\[0\] {
+  z-index: 0;
 }
 
 .float-start {
@@ -901,6 +925,18 @@ video {
   height: 100%;
 }
 
+.min-h-\[200px\] {
+  min-height: 200px;
+}
+
+.min-h-\[90\%\] {
+  min-height: 90%;
+}
+
+.min-h-\[10\%\] {
+  min-height: 10%;
+}
+
 .w-28 {
   width: 7rem;
 }
@@ -927,6 +963,18 @@ video {
 
 .min-w-\[90\%\] {
   min-width: 90%;
+}
+
+.min-w-\[10\%\] {
+  min-width: 10%;
+}
+
+.min-w-\[1\%\] {
+  min-width: 1%;
+}
+
+.min-w-\[9\%\] {
+  min-width: 9%;
 }
 
 .max-w-7xl {
@@ -1126,6 +1174,14 @@ video {
 
 .snap-always {
   scroll-snap-stop: always;
+}
+
+.scroll-m-10 {
+  scroll-margin: 2.5rem;
+}
+
+.scroll-m-1 {
+  scroll-margin: 0.25rem;
 }
 
 .list-inside {
@@ -1963,6 +2019,15 @@ video {
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
 }
 
+.bg-black\/100 {
+  background-color: rgb(0 0 0 / 1);
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-home {
   background-image: url('/assets/bg.png');
 }
@@ -2118,6 +2183,16 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2205,6 +2280,10 @@ video {
 
 .font-medium {
   font-weight: 500;
+}
+
+.font-thin {
+  font-weight: 100;
 }
 
 .uppercase {
@@ -2754,8 +2833,45 @@ body{
 }
 
 @media (min-width: 768px) {
+  .md\:fixed {
+    position: fixed;
+  }
+
+  .md\:min-h-\[200px\] {
+    min-height: 200px;
+  }
+
+  .md\:min-h-\[10px\] {
+    min-height: 10px;
+  }
+
   .md\:min-w-\[600px\] {
     min-width: 600px;
+  }
+
+  .md\:min-w-\[10px\] {
+    min-width: 10px;
+  }
+
+  .md\:min-w-\[1px\] {
+    min-width: 1px;
+  }
+
+  .md\:min-w-\[6px\] {
+    min-width: 6px;
+  }
+
+  .md\:min-w-\[1500px\] {
+    min-width: 1500px;
+  }
+
+  .md\:scroll-m-0 {
+    scroll-margin: 0px;
+  }
+
+  .md\:scroll-mx-3 {
+    scroll-margin-left: 0.75rem;
+    scroll-margin-right: 0.75rem;
   }
 
   .md\:grid-cols-2 {
@@ -2764,6 +2880,14 @@ body{
 
   .md\:gap-10 {
     gap: 2.5rem;
+  }
+
+  .md\:overflow-auto {
+    overflow: auto;
+  }
+
+  .md\:overflow-scroll {
+    overflow: scroll;
   }
 
   .md\:text-3xl {
