@@ -8,9 +8,31 @@ const closeModalBtn = document.getElementById("close-modal-btn")
 const cartCounter = document.getElementById("cart-count")
 const addressInput = document.getElementById("address")
 const addressWarn = document.getElementById("address-warn")
+const observa = document.getElementById("obs")
+const cartObs = document.getElementById("cart-obs")
+const closeModalObs = document.getElementById("close-modal-obs")
+
+
 
 
 let cart = [];
+
+//observa.addEventListener("click", function() {
+//       
+//   updateCartModal();
+//  cartObs.style.display = "flex"
+//    
+//})
+//cartObs.addEventListener("click", function(event) {
+//    if(event.target === cartObs){
+//        cartObs.style.display = "none"
+//    }
+//})
+//closeModalObs.addEventListener("click", function(){
+//    cartObs.style.display = "none"
+//})
+
+
 
 // abrir modal do carrinho
 cartBtn.addEventListener("click", function() {
@@ -40,24 +62,25 @@ menu.addEventListener("click", function(event){
 
         //adicionar no carrinho
         addToCart(name, price)
+        const isOpen = checkRestaurantOpen();
+        if(isOpem){
+            
+            Toastify({
+                text: "Item Adicionado",
+                duration: 3000,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "#ef4444",
+                },
+            }).showToast();
+    
+            return;
+        }
     }
-    const isOpen = checkRestaurantOpen();
-    if(isOpem){
-        
-        Toastify({
-            text: "Item Adicionado",
-            duration: 3000,
-            close: true,
-            gravity: "top", // `top` or `bottom`
-            position: "right", // `left`, `center` or `right`
-            stopOnFocus: true, // Prevents dismissing of toast on hover
-            style: {
-              background: "#ef4444",
-            },
-        }).showToast();
 
-        return;
-    }
 
 })
 
@@ -190,9 +213,10 @@ checkoutBtn.addEventListener("click", function(){
     //enviar pedido no whats
     const cartItems = cart.map((item) => {
         return( 
-            `${item.name} 
+            ` ${item.name} 
              Quantidade: (${item.quantity}) 
              Preço: R$${item.price} | "  "
+
              `
             
         )
