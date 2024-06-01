@@ -30,6 +30,8 @@ closeModalBtn.addEventListener("click", function(){
 })
 
 menu.addEventListener("click", function(event){
+
+
     let parentButton = event.target.closest(".add-to-cart-btn")
 
     if(parentButton){
@@ -39,6 +41,24 @@ menu.addEventListener("click", function(event){
         //adicionar no carrinho
         addToCart(name, price)
     }
+    const isOpen = checkRestaurantOpen();
+    if(isOpem){
+        
+        Toastify({
+            text: "Item Adicionado",
+            duration: 3000,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "#ef4444",
+            },
+        }).showToast();
+
+        return;
+    }
+
 })
 
 //funçao para add no carrinho
@@ -193,7 +213,7 @@ checkoutBtn.addEventListener("click", function(){
 function checkRestaurantOpen(){
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 16 && hora < 20; //true
+    return hora >= 9 && hora < 20; //true
 }
 
 const spanItem = document.getElementById("text-span")
