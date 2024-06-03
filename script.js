@@ -17,20 +17,6 @@ const closeModalObs = document.getElementById("close-modal-obs")
 
 let cart = [];
 
-//observa.addEventListener("click", function() {
-//       
-//   updateCartModal();
-//  cartObs.style.display = "flex"
-//    
-//})
-//cartObs.addEventListener("click", function(event) {
-//    if(event.target === cartObs){
-//        cartObs.style.display = "none"
-//    }
-//})
-//closeModalObs.addEventListener("click", function(){
-//    cartObs.style.display = "none"
-//})
 
 
 
@@ -119,13 +105,13 @@ function updateCartModal(){
         cartItemElement.innerHTML = `
             <div class="flex items-center justify-between">
                 <div>
-                    <p class="font-medium">${item.name}</p>
-                    <p>Qtd: ${item.quantity}</p>
+                    <p class="font-bold">${item.name}</p>
+                    <p class="font-bold>Qtd: ${item.quantity}</p>
                     <p class="font-medium mt-2">${item.price.toFixed(2)}</p>
                 </div>
 
              
-                <button class="remove-from-cart-btn" data-name="${item.name}">
+                <button class="remove-from-cart-btn hover:text-red-500 rounded" data-name="${item.name}">
                     Remover
                 </button>
                 
@@ -237,7 +223,7 @@ checkoutBtn.addEventListener("click", function(){
 function checkRestaurantOpen(){
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 9 && hora < 20; //true
+    return hora >= 6 && hora < 23; //true
 }
 
 const spanItem = document.getElementById("text-span")
