@@ -106,7 +106,7 @@ function updateCartModal(){
             <div class="flex items-center justify-between">
                 <div>
                     <p class="font-bold">${item.name}</p>
-                    <p class="font-bold>Qtd: ${item.quantity}</p>
+                    <p class="font-bold">Qtd: ${item.quantity}</p>
                     <p class="font-medium mt-2">${item.price.toFixed(2)}</p>
                 </div>
 
